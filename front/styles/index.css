@@ -1,3 +1,48 @@
 body{
     background-color: crimson;
 }
+/* General navbar styles */
+nav {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Cambia la alineación de los elementos */
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    background-color: #575757; /* Efecto hover */
+    border-radius: 5px; /* Bordes redondeados al pasar el mouse */
+  }
+  
+  /* Navbar estilo flotante */
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray;
+  }
+.logo{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+}  
