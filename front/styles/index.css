@@ -63,3 +63,16 @@ nav ul li a {
       text-align: center;
     }
   }
+  .banner {
+    display: flex;           /* Hace que los elementos hijos estén uno al lado del otro */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;     /* Alineación vertical en el centro */
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .banner div {
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+  }
