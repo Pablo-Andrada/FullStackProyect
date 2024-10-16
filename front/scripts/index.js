@@ -19,15 +19,12 @@ function buildMovie(movie) {
     directorElement.textContent = director;
     durationElement.textContent = duration;
     yearElement.textContent = year;
-
     genreElement.textContent = genre.join(" ") // "Action Adventure Comedy"
+    rateElement.textContent = rate;
+    posterElement.src = poster;
+    posterElement.alt = `Poster of ${title}`;
 
-    h3.innerHTML = title;
-    p.innerHTML = description;
-    img.src = imgUrl;
-    //?agregarle los estilos
-    p.class = "description";
-    img.class = "activity-image";
+    
     const div = document.createElement("div");
     div.appendChild(h3);
     div.appendChild(p);
