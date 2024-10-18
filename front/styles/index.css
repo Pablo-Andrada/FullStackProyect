@@ -179,3 +179,8 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.title{
+  color: #00aced;
+  font-size: 30px;
+}
