@@ -24,12 +24,27 @@ function buildMovie(movie) {
     posterElement.src = poster;
     posterElement.alt = `Poster of ${title}`;
 
+    /* FALTA DAR ESTILOS A title por ejemplo
+    titleElement.class = title
+    */
+    cardFront.class = "card-front";
+    cardBack.class = "card-back";
+
     
-    const div = document.createElement("div");
-    div.appendChild(h3);
-    div.appendChild(p);
-    div.appendChild(img);
-    div.class = "activity";
-    div.id = id;
-    return div;
+    cardFront.appendChild(posterElement);
+    cardBack.appendChild(titleElement);
+    cardBack.appendChild(directorElement);
+    cardBack.appendChild(genreElement);
+    cardBack.appendChild(yearElement);
+    cardBack.appendChild(durationElement);
+    cardBack.appendChild(rateElement);
+
+    const cardContainer = document.createElement("div");
+
+    cardContainer.class = cardContainer;
+
+    cardContainer.appendChild(cardFront);
+    cardContainer.appendChild(cardBack);
+
+ 
 }
