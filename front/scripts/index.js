@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", () => {
     const cardsContainer = document.getElementById("cardsContainer");
     const movies = buildMovies();
@@ -84,3 +85,7 @@ window.addEventListener('blur', () => {
 window.addEventListener('focus', () => {
     document.title = previousTitle;
 })
+*/
+
+const container = $("cardsContainer");
+console.log(container);
