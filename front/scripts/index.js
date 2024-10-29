@@ -1,8 +1,10 @@
-/*
 document.addEventListener("DOMContentLoaded", () => {
     const cardsContainer = document.getElementById("cardsContainer");
-    const movies = buildMovies();
-    movies.forEach((movie) => cardsContainer.appendChild(movie));
+    $.get("https://students-api.up.railway.app/movies", (data) => {
+  
+        const moviesHTMLs = data.map((movie) => buildMovie(movie));
+        moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie));
+      })
 });
 
 function buildMovie(movie) {
@@ -69,7 +71,8 @@ function buildMovie(movie) {
 }
 
 function buildMovies() {
-    return tempData.map((movie) => buildMovie(movie));
+
+  
 }
 
 
@@ -85,7 +88,7 @@ window.addEventListener('blur', () => {
 window.addEventListener('focus', () => {
     document.title = previousTitle;
 })
-*/
+
 
 //students-api.up.railway.app/movies
 
