@@ -6,5 +6,6 @@ module.exports = {
         //path: __dirname + '/dist'
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-      },
+    },
+    mode: "development"
 };

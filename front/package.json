@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "build":"webpack"
+    "build":"webpack",
+    "build-watch":"webpack --watch",
+    "dev":"npm run build-watch & npm start"
   },
   "keywords": [],
   "author": "",
