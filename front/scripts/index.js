@@ -1,12 +1,24 @@
+const axios = require("axios")
+
 const buildMovie = require("./buildMovie");
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const cardsContainer = document.getElementById("cardsContainer");
-    $.get("https://students-api.up.railway.app/movies", (data) => {
-  
+// acá cambio el jQuery por asyn await:
+    try {
+        const response = await axios.get("https://students-api.up.railway.app/movies");
         const moviesHTMLs = data.map((movie) => buildMovie(movie));
-        moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie));
-      })
+        moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie))
+    } catch (error) {
+        console.error("Error fetching movies:", error);
+    }
+    
+    
+    // $.get("https://students-api.up.railway.app/movies", (data) => {
+  
+    //     const moviesHTMLs = data.map((movie) => buildMovie(movie));
+    //     moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie));
+    //   })
 });
 
 
