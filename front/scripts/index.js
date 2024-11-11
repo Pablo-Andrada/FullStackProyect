@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 // acá cambio el jQuery por asyn await:
     try {
         const response = await axios.get("https://students-api.up.railway.app/movies");
-        const moviesHTMLs = data.map((movie) => buildMovie(movie));
+        const moviesHTMLs = response.data.map((movie) => buildMovie(movie));
         moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie))
     } catch (error) {
         console.error("Error fetching movies:", error);
