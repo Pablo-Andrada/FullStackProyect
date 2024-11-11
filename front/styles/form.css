@@ -1,0 +1,59 @@
+/* Estilo para el formulario */
+#movieForm {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#movieForm label {
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#movieForm input[type="text"],
+#movieForm input[type="number"],
+#movieForm input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo específico para el área de género */
+#genre {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#genre label {
+    font-size: 1rem;
+    color: #34495e;
+}
