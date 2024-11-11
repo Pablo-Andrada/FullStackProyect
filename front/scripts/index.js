@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cardsContainer = document.getElementById("cardsContainer");
 // acá cambio el jQuery por asyn await:
     try {
-        const response = await axios.get("https://students-api.up.railway.app/movies");
+        const response = await axios.get("http://localhost:3000/movies");
         const moviesHTMLs = response.data.map((movie) => buildMovie(movie));
         moviesHTMLs.forEach((movie) => cardsContainer.appendChild(movie))
     } catch (error) {
