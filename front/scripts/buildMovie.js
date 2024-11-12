@@ -58,7 +58,13 @@ function buildMovie(movie) {
     cardContainer.appendChild(cardFront);
     cardContainer.appendChild(cardBack);
 
-    return cardContainer;
+    console.log("Generated card for:", title); 
+return cardContainer;
+
+
+   
+
+    
 }
 
 module.exports = buildMovie;
