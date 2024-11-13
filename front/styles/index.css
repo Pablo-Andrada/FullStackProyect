@@ -1,5 +1,5 @@
 body{
-    background-color: crimson;
+    background-color: rgb(26, 24, 25);
 }
 /* General navbar styles */
 nav {
@@ -51,7 +51,7 @@ nav ul li a {
   }
   
   nav ul li a:hover {
-    background-color: #007bff;
+    background-color: #043364;
     color: #fff;
   }
   @media (max-width: 600px) {
