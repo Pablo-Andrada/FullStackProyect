@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="../styles/index.css">
   <link rel="stylesheet" href="../styles/form.css">
   <title>Add Movie - Cinema Club</title>
+
+    <!-- Incluir axios desde el CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <header>
@@ -70,12 +73,12 @@
     function clearForm() {
       document.getElementById("movieForm").reset();
     }
-
+  
     // Manejar el evento de envío del formulario
-    document.getElementById("movieForm").addEventListener("submit", function(event) {
+    document.getElementById("movieForm").addEventListener("submit", async function(event) {
       event.preventDefault(); // Evitar el envío del formulario
-
-      // Seleccionar todos los inputs
+  
+      // Obtener los valores del formulario
       const title = document.getElementById("title").value;
       const year = document.getElementById("year").value;
       const director = document.getElementById("director").value;
@@ -83,15 +86,39 @@
       const genreSelected = document.querySelectorAll('input[name="genre"]:checked');
       const rate = document.getElementById("rate").value;
       const poster = document.getElementById("poster").value;
-
+  
       // Verificar que todos los campos estén completos
       if (!title || !year || !director || !duration || genreSelected.length === 0 || !rate || !poster) {
         alert("Por favor, complete todos los campos.");
       } else {
-        console.log("Formulario completado correctamente.");
-        // Aquí se podrían enviar los datos si estuviera conectado a un backend
+        // Crear un array de géneros seleccionados
+        const genres = Array.from(genreSelected).map((checkbox) => checkbox.value);
+  
+        // Crear el objeto con los datos de la película
+        const movieData = {
+          title,
+          year,
+          director,
+          duration,
+          genre: genres, // Géneros seleccionados
+          rate,
+          poster
+        };
+  
+        try {
+          // Realizar la solicitud POST a la API
+          const response = await axios.post('http://localhost:3000/movies', movieData);
+          console.log('Película creada con éxito:', response.data);
+          // Aquí podrías agregar lógica para actualizar la UI, como limpiar el formulario, mostrar un mensaje de éxito, etc.
+          alert('Pelicula creada con éxito');
+        } catch (error) {
+          console.error('Error al crear la película:', error.response ? error.response.data : error);
+          // Mostrar error en caso de que la solicitud falle
+          alert('Hubo un error al crear la película');
+        }
       }
     });
   </script>
+  
 </body>
 </html>
