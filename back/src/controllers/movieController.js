@@ -10,7 +10,17 @@ module.exports = {
                 error:"Error al cargar movies en el servidor"
             })
         }
-
-
     },
+    crateMovie: async (req, res) => {
+        try {
+            const { title, year, director, duration, genre, rate, poster } = req.body;
+            const newMovie = await movieService.createMovie({ title, year, director, duration, genre, rate, poster });
+            res.status(201).json({message: "Pelicula creada con éxito"})
+        } catch (error) {
+            res.status(500).json({
+                error:"Error al crear la película"
+            })
+        }
+    }
+
 }
