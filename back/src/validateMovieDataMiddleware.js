@@ -1,5 +1,3 @@
-// middlewares/validateMovieData.js
-
 const validateMovieDataMiddleware = (req, res, next) => {
     const { title, year, director, duration, genre, rate, poster } = req.body;
 
@@ -26,9 +24,13 @@ const validateMovieDataMiddleware = (req, res, next) => {
     if (!Array.isArray(genre) || genre.length === 0) {
         return res.status(400).json({ error: "El género debe ser un array con al menos un elemento" });
     }
-    if (typeof rate !== 'number' || rate < 0 || rate > 10) {
+
+    // Asegurarse de que 'rate' sea un número entre 0 y 10
+    const numericRate = parseFloat(rate);  // Convertir el valor a número
+    if (isNaN(numericRate) || numericRate < 0 || numericRate > 10) {
         return res.status(400).json({ error: "La calificación debe ser un número entre 0 y 10" });
     }
+
     if (typeof poster !== 'string' || poster.trim() === "") {
         return res.status(400).json({ error: "El poster debe ser un enlace no vacío" });
     }
