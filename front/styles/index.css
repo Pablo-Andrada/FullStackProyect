@@ -91,6 +91,7 @@ nav ul li a {
   footer p {
     margin: 0;
     font-size: 1rem;
+    text-align: center;
   }
   
   footer ul.social-media {
