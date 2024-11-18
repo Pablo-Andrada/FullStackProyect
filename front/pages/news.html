@@ -4,37 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/index.css">
-    <title>Cinema Club</title>
+    <link rel="stylesheet" href="../styles/news.css">
+    <title>Cinema Club - News</title>
 </head>
 <body>
     <header>
         <div class="logo">
-          <img src="../assets/nuevo-logo-cinema-png.jpg" alt="Logo Cinema">
-          <h1>Cinema Club</h1>
-          <h2>News</h2>
-
+            <img src="../assets/nuevo-logo-cinema-png.jpg" alt="Logo Cinema">
+            <h1>Cinema Club</h1>
+            <h2>News</h2>
         </div>
         <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./movies.html">Movies</a></li>
-            <li><a href="./form.html">Add Movie</a></li>
-            <li><a href="./about.html">About</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./movies.html">Movies</a></li>
+                <li><a href="./form.html">Add Movie</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
         </nav>
-      </header>
-    <p>NEWS</p>
+    </header>
 
-      <footer>   
+    <main>
+        <section class="intro">
+            <h1>Welcome to Cinema Club News</h1>
+            <p>Stay updated with the latest additions to our movie collection. Here, you'll find the newest films added to our database, hand-picked for you to enjoy. Explore our ever-growing library and discover your next favorite movie.</p>
+        </section>
+
+        <section class="news-carousel">
+            <h2>Latest Additions</h2>
+            <div class="carousel">
+                <!-- Aquí se agregarán las películas dinámicamente -->
+                <div class="carousel-track">
+                    <!-- Películas ejemplo -->
+                    <div class="carousel-item">
+                        <img src="../assets/example1.jpg" alt="Movie Poster 1">
+                        <p>Movie Title 1</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/example2.jpg" alt="Movie Poster 2">
+                        <p>Movie Title 2</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/example3.jpg" alt="Movie Poster 3">
+                        <p>Movie Title 3</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="footer-content">
-          <p>© 2024 Cinema Club. All rights reserved.</p>
-          <ul class="social-media">
-            <li><a href="../pages/about.html"><i></i>About us</a></li>
-            <li><a href="../pages/contact.html"><i></i>Contact</a></li>
-          </ul>
+            <p>© 2024 Cinema Club. All rights reserved.</p>
+            <ul class="social-media">
+                <li><a href="../pages/about.html"><i></i>About us</a></li>
+                <li><a href="../pages/contact.html"><i></i>Contact</a></li>
+            </ul>
         </div>
     </footer>
 
+    <script src="../scripts/carousel.js"></script>
 </body>
 </html>
