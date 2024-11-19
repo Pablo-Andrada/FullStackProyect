@@ -97,7 +97,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(73, 0, 0, 0.5);
     border: none;
     color: white;
     font-size: 2rem;
