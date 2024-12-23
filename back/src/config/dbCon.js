@@ -1,5 +1,5 @@
-// require("dotenv").config();
-// const mongoose = require("mongoose");
+ require("dotenv").config();
+ //const mongoose = require("mongoose");
 
 
 // const dbCon = async () => {
@@ -35,8 +35,8 @@ const dbCon = async () => {
         }
 
         await mongoose.connect(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
+            //useNewUrlParser: true,
+            //useUnifiedTopology: true,
         });
 
         console.log("Conexión exitosa a la base de datos");
