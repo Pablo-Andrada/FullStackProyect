@@ -7,6 +7,8 @@ require("dotenv").config();
 //  };
  
 //  module.exports = dbCon;
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 
 const dbCon = async () => {
