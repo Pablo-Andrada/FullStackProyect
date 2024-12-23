@@ -1,12 +1,12 @@
  require("dotenv").config();
- //const mongoose = require("mongoose");
+ const mongoose = require("mongoose");
 
 
-// const dbCon = async () => {
-//     await mongoose.connect(process.env.MONGO_URI);
-//  };
+const dbCon = async () => {
+    await mongoose.connect(process.env.MONGO_URI);
+ };
  
-//  module.exports = dbCon;
+ module.exports = dbCon;
 
 // require("dotenv").config();
 // const mongoose = require("mongoose");
@@ -25,25 +25,25 @@
 // };
 
 // module.exports = dbCon;
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const dbCon = async () => {
-    try {
-        const uri = process.env.MONGO_URI;
-        if (!uri) {
-            throw new Error("La variable de entorno MONGO_URI no está definida.");
-        }
+// const dbCon = async () => {
+//     try {
+//         const uri = process.env.MONGO_URI;
+//         if (!uri) {
+//             throw new Error("La variable de entorno MONGO_URI no está definida.");
+//         }
 
-        await mongoose.connect(uri, {
-            //useNewUrlParser: true,
-            //useUnifiedTopology: true,
-        });
+//         await mongoose.connect(uri, {
+//             //useNewUrlParser: true,
+//             //useUnifiedTopology: true,
+//         });
 
-        console.log("Conexión exitosa a la base de datos");
-    } catch (error) {
-        console.error("Error al conectar a la base de datos:", error.message);
-        throw error; // Lanza el error para que lo capture el índice
-    }
-};
+//         console.log("Conexión exitosa a la base de datos");
+//     } catch (error) {
+//         console.error("Error al conectar a la base de datos:", error.message);
+//         throw error; // Lanza el error para que lo capture el índice
+//     }
+// };
 
 module.exports = dbCon;
