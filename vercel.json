@@ -1,18 +1,18 @@
 {
-   "builds": [
+  "builds": [
     {
-      "src": "back/index.js",
+      "src": "front/package.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "back/package.json",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "back/index.js"
+      "dest": "/front/$1"
     }
   ]
 }
-
-  
-  
-  
