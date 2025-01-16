@@ -3,7 +3,7 @@
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f3f3f3;
+    background-color: #e0dfdf;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -35,7 +35,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #3498db;
+    background-color: #37a3eb;
     border: none;
     border-radius: 5px;
     cursor: pointer;
