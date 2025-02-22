@@ -22,8 +22,11 @@
 //     console.log("Error al conectar a la base de datos");    
 // })
 require("dotenv").config();
+const cors = require("cors");
+
 const app = require("./src/server");
 const dbCon = require("./src/config/dbCon");
+app.use(cors());
 
 // Conectar a la base de datos antes de exportar la aplicación
 (async () => {
